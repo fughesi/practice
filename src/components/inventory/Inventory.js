@@ -6,9 +6,11 @@ export default function Inventory() {
   const inventory = InventoryJSON.map((i) => {
     return (
       <div className="inventoryCards">
-        <p>{i.quantity} items</p>
-        <p>{i.name}</p>
         <img src={i.src} alt={i.alt} />
+        <p>{i.name}</p>
+        <p>
+          <span className="quantity">{i.quantity}</span> items
+        </p>
       </div>
     );
   });

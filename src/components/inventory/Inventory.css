@@ -1,16 +1,24 @@
 @import url("./../../App.css");
 
 .inventory {
+  margin-top: 2rem;
   display: grid;
-  gap: 0.5rem;
   grid-auto-flow: column;
+  /* grid-auto-columns: 18%; */
+  justify-items: center;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
 }
 
 .inventoryCards {
-  display: grid;
+  padding: 2rem 0 2rem 2rem;
   position: relative;
-  border-radius: 25px;
-  outline: 2px solid orange;
+  max-width: fit-content;
+  display: grid;
+  place-items: center;
+  scroll-snap-align: start;
+  inline-size: 100%;
 }
 
 .inventoryCards > * {
@@ -18,15 +26,34 @@
   grid-row: 1 / 2;
 }
 
-.inventoryCards p:first-child {
+.quantity {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.inventoryCards > p:nth-child(2),
+.inventoryCards > p:nth-child(3) {
   position: absolute;
   color: #fff;
+  font-weight: 700;
+}
+
+.inventoryCards > p:nth-child(2) {
   bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.inventoryCards > p:nth-child(3) {
+  top: 0px;
   left: 0px;
 }
 
 .inventory img {
   z-index: -1;
-  width: 100%;
   object-fit: cover;
+  border-radius: 5px;
+  aspect-ratio: 1/1;
+  width: 7.18rem;
+  box-shadow: 0px 0px 10px #0005;
 }

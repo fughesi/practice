@@ -1,1 +1,33 @@
-@import url('./../../App.css')
+@import url("./../../App.css");
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem;
+  width: 100%;
+}
+
+.hamburger:first-child,
+.hamburger:last-child {
+  position: relative;
+  width: 2rem;
+  height: 2px;
+  background-color: gray;
+}
+
+.hamburger:last-child {
+  transform: translateY(.5rem);
+}
+
+.hamburger:first-child::before,
+.hamburger:last-child::before {
+  position: absolute;
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background-color: gray;
+  top: -.3rem;
+  left: 0;
+}
