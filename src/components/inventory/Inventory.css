@@ -4,11 +4,18 @@
   margin-top: 2rem;
   display: grid;
   grid-auto-flow: column;
-  /* grid-auto-columns: 18%; */
+  grid-auto-columns: 38%;
   justify-items: center;
+
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.inventory::-webkit-scrollbar {
+  display: none;
 }
 
 .inventoryCards {
@@ -53,7 +60,7 @@
   z-index: -1;
   object-fit: cover;
   border-radius: 5px;
-  aspect-ratio: 1/1;
-  width: 7.18rem;
-  box-shadow: 0px 0px 10px #0005;
+  aspect-ratio: 2/1;
+  width: 100%;
+  box-shadow: var(--shadow1);
 }

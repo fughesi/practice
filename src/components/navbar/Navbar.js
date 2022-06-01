@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from './../../resources/logos/MonkeyHead'
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -9,7 +10,7 @@ export default function Navbar() {
         <div className="hamburger"></div>
       </div>
       <h3>FUGHESI ink</h3>
-      <div className="search"></div>
+      <div className="logo"><Logo width={35} ButtonsButtons/></div>
     </div>
   );
 }

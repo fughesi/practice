@@ -1,3 +1,29 @@
+:root {
+  /* COLORS */
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --linkHover: #1b4698;
+
+  --color1: #eeece8;
+  --color2: #c4bfb8;
+  --color3: #333533;
+  --color4: #202020;
+  /* --color5: #eb5e28; */
+  --color5: #3061ff;
+  --color6: #ffbe03;
+
+  /* WEIGHTS */
+  --reg: 300;
+  --bold: 700;
+
+  /* SHADOWS */
+  --shadow1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --shadow2: 0px 0px 10px #0005;
+  --outline: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
 *,
 *::before,
 *::after {
@@ -11,5 +37,9 @@ html {
 }
 
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
 }

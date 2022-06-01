@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import React from "react";
 import InventoryJSON from "./../../JSON/inventoryJSON";
 import "./Inventory.css";
@@ -6,11 +7,11 @@ export default function Inventory() {
   const inventory = InventoryJSON.map((i) => {
     return (
       <div className="inventoryCards">
-        <img src={i.src} alt={i.alt} />
-        <p>{i.name}</p>
+        <img src={i.src} alt={i.alt} key={nanoid}/>
+        {/* <p>{i.name}</p>
         <p>
           <span className="quantity">{i.quantity}</span> items
-        </p>
+        </p> */}
       </div>
     );
   });
